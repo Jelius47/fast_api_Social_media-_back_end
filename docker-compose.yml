@@ -1,0 +1,22 @@
+version: '3'
+services:
+  api:
+    build: .
+    ports:
+      # An array of ports to expose
+      # Format: - "<PORT_ON_LOCAL_HOST_ANY_PORT>:<PORT_ON_DOCKER_CONTAINER>"
+      - "8000:8000"
+    env_file:
+        - ./app/.env
+    # environment:
+    #   - DATABASE_HOSTNAME=localhost
+    #   - DATABASE_PORT=8000
+    #   - DATABASE_PASSWORD=postgres
+    #   - DATABASE_NAME=fastapi_course
+    #   - DATABASE_USERNAME=postgres
+    #   - SECRET_KEY=a007ac9b9fdcf610cc5c2333acfdb951ea4f9c268adb3f17a336620f85b28711
+    #   - ALGORITHM=HS256
+    #   - ACCESS_TOKEN_EXPIRE_MINUTES=120
+
+# to run the docker-compose.yml file use the command:
+# docker-compose up -d (-d means detached mode/runs the container in the background)
